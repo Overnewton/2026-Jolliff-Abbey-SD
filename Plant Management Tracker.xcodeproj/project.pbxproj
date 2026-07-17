@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		33189B4D2FE8CD6700C5EEB1 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */ = {
+		3355DC373009C92E0031A2C8 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,10 +21,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		33189B3D2FE8CD6300C5EEB1 /* Plant Management Tracker */ = {
+		3355DC273009C92D0031A2C8 /* Plant Management Tracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				33189B4D2FE8CD6700C5EEB1 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */,
+				3355DC373009C92E0031A2C8 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */,
 			);
 			path = "Plant Management Tracker";
 			sourceTree = "<group>";
@@ -45,7 +45,7 @@
 		33189B322FE8CD6300C5EEB1 = {
 			isa = PBXGroup;
 			children = (
-				33189B3D2FE8CD6300C5EEB1 /* Plant Management Tracker */,
+				3355DC273009C92D0031A2C8 /* Plant Management Tracker */,
 				33189B3C2FE8CD6300C5EEB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +74,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				33189B3D2FE8CD6300C5EEB1 /* Plant Management Tracker */,
+				3355DC273009C92D0031A2C8 /* Plant Management Tracker */,
 			);
 			name = "Plant Management Tracker";
 			packageProductDependencies = (
