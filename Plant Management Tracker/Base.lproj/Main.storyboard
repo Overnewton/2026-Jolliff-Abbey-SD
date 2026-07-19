@@ -11,7 +11,7 @@
         <!--Plants View Controller-->
         <scene sceneID="RfK-en-ZqW">
             <objects>
-                <viewController id="F4R-tW-wPL" customClass="PlantsViewController" sceneMemberID="viewController">
+                <viewController id="F4R-tW-wPL" customClass="PlantsViewController" customModule="Plant_Management_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmb-8i-uUW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
         <!--Tasks-->
         <scene sceneID="gwI-86-XtI">
             <objects>
-                <viewController id="KUL-a4-1UC" customClass="TasksViewController" sceneMemberID="viewController">
+                <viewController id="KUL-a4-1UC" customClass="TasksViewController" customModule="Plant_Management_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cml-Nx-9nJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
         <!--Home View Controller-->
         <scene sceneID="TbT-wC-GjG">
             <objects>
-                <viewController id="YPu-jz-M1c" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="YPu-jz-M1c" customClass="HomeViewController" customModule="Plant_Management_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="59f-UL-Gdm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +215,7 @@
         <!--Add Plant View Controller-->
         <scene sceneID="rqv-98-iJJ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="gZs-Ga-pys" customClass="AddPlantViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="gZs-Ga-pys" customClass="AddPlantViewController" customModule="Plant_Management_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OBV-yw-S0k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +244,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" image="square.and.arrow.up" catalog="system" title="Upload Image"/>
+                                <connections>
+                                    <action selector="btnUploadImage:" destination="gZs-Ga-pys" eventType="touchUpInside" id="x9S-eX-Uyb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATJ-6a-cRX">
                                 <rect key="frame" x="204" y="220" width="47" height="23"/>
@@ -279,19 +282,19 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sunlight Requirements:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho8-D0-F9l">
-                                <rect key="frame" x="26" y="403" width="187" height="22"/>
+                                <rect key="frame" x="26" y="361" width="187" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zCi-Uz-U8j">
-                                <rect key="frame" x="233" y="399" width="161" height="31"/>
+                                <rect key="frame" x="58" y="390" width="299" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
+                                    <segment title="Full Sunlight"/>
+                                    <segment title="Half Sunlight"/>
+                                    <segment title="Shade"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watering Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXy-t7-qQU">
@@ -379,23 +382,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bto-9k-PjV">
-                                <rect key="frame" x="155" y="761" width="104" height="35"/>
+                                <rect key="frame" x="155" y="756" width="104" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save Plant"/>
+                                <connections>
+                                    <action selector="btnSavePlant:" destination="gZs-Ga-pys" eventType="touchUpInside" id="xPD-JR-uDb"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validation Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-YS-5A9">
-                                <rect key="frame" x="133" y="816" width="148" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validation Message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-YS-5A9">
+                                <rect key="frame" x="69" y="801" width="276" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60F-SD-L8J">
+                                <rect key="frame" x="14" y="40" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.backward.circle" catalog="system" title="Back"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="gZs-Ga-pys" eventType="touchUpInside" id="UUf-FK-Blv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DI-3y-gUt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="AEP-0U-s2o"/>
+                    <connections>
+                        <outlet property="lblValidationMessage" destination="6zo-YS-5A9" id="zhX-yP-Ep1"/>
+                        <outlet property="plantImageView" destination="UbT-Gl-Tca" id="B17-DI-w5x"/>
+                        <outlet property="segPlantType" destination="lOE-tA-DOh" id="brh-hb-REh"/>
+                        <outlet property="segSunlightRequirement" destination="zCi-Uz-U8j" id="IQo-yz-2BY"/>
+                        <outlet property="switchFertilisingReminder" destination="Q7k-2q-o1s" id="71w-3k-Uo5"/>
+                        <outlet property="switchWateringReminder" destination="Yvy-Az-CNc" id="SMr-3s-fHt"/>
+                        <outlet property="txtFertilisingFrequency" destination="mpJ-AP-8pU" id="b5a-4E-Glf"/>
+                        <outlet property="txtPlantName" destination="N6U-dD-oea" id="6to-ce-8Pm"/>
+                        <outlet property="txtViewNotes" destination="L2X-FN-rro" id="fx6-CC-Om2"/>
+                        <outlet property="txtWateringFrequency" destination="hSW-Ag-knm" id="G46-Mb-0q1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZN-pO-Kbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,7 +431,7 @@
         <!--Plants Details View Controller-->
         <scene sceneID="ZBc-dz-g30">
             <objects>
-                <viewController id="7d8-18-LY9" customClass="PlantsDetailsViewController" sceneMemberID="viewController">
+                <viewController id="7d8-18-LY9" customClass="PlantsDetailsViewController" customModule="Plant_Management_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7D3-Nf-u9O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,6 +653,7 @@
         <segue reference="BWh-qI-LqO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.backward.circle" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="leaf" catalog="system" width="128" height="111"/>
         <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
@@ -637,6 +665,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.21960784310000001" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
