@@ -55,11 +55,18 @@ class AddPlantViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func btnSavePlant(_ sender: UIButton) {
         
+        //Check that all user input is valid.
         guard validateInput()
                 
         else {
             return
         }
+        
+        //Create a new Plant object from the user input.
+        let newPlant = createPlant()
+        
+        //Save the Plant object.
+        DataManager.shared.addPlant(newPlant)
     }
     
     
@@ -226,6 +233,57 @@ class AddPlantViewController: UIViewController, UIImagePickerControllerDelegate,
         
         dismiss(animated: true)
     }
+    
+    
+    private func createPlant() -> Plant {
+        
+        let plantID = DataManager.shared.generatePlantID()
+        
+        let plantName = txtPlantName.text! .trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let plantType: String
+        
+        if segPlantType.selectedSegmentIndex == 0 {
+            
+            plantType = "Indoor"
+        }
+        else {
+            plantType = "Outdoor"
+        }
+        
+        let wateringFrequency = Int(txtWateringFrequency.text!)!
+        
+        let fertilisingFrequency = Int(txtFertilisingFrequency.text!)!
+        
+        let sunlightRequirement: String
+        
+        switch segSunlightRequirement.selectedSegmentIndex {
+            
+        case 0: sunlightRequirement = "Full Sunlight"
+            
+        case 1: sunlightRequirement = "Partial Sunlight"
+            
+        default: sunlightRequirement = "Shade"
+        }
+        
+        let plantNotes = txtViewNotes.text ?? ""
+        
+        let wateringReminderEnabled = switchWateringReminder.isOn
+        
+        let fertilisingReminderEnabled = switchFertilisingReminder.isOn
+        
+        guard let image = selectedPlantImage, let plantImage = image.jpegData(compressionQuality: 0.8)
+        else {
+            fatalError("Unable to convert plant image to data.")
+        }
+        
+        let plant = Plant(plantID: plantID, plantName: plantName, plantType: plantType, wateringFrequency: wateringFrequency, fertilisingFrequency: fertilisingFrequency, sunlightRequirement: sunlightRequirement, plantNotes: plantNotes, wateringReminderEnabled: wateringReminderEnabled, fertilisingReminderEnabled: fertilisingReminderEnabled, plantImage: plantImage)
+        
+        return plant
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

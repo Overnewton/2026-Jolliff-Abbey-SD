@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenDyslexic-Regular.otf">
+            <string>OpenDyslexic-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Plants View Controller-->
         <scene sceneID="RfK-en-ZqW">
@@ -249,9 +254,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATJ-6a-cRX">
-                                <rect key="frame" x="204" y="220" width="47" height="23"/>
+                                <rect key="frame" x="204" y="220" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="OpenDyslexic-Regular" family="OpenDyslexic" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -261,16 +266,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ3-hw-1dR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plant Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ3-hw-1dR">
                                 <rect key="frame" x="204" y="140" width="110" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Plant Name: ">
-                                        <attributes>
-                                            <font key="NSFont" size="19" name="OpenDyslexic-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="OpenDyslexic-Regular" family="OpenDyslexic" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-tA-DOh">
@@ -289,11 +289,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zCi-Uz-U8j">
-                                <rect key="frame" x="58" y="390" width="299" height="32"/>
+                                <rect key="frame" x="58" y="391" width="299" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Full Sunlight"/>
-                                    <segment title="Half Sunlight"/>
+                                    <segment title="Partial Sunlight"/>
                                     <segment title="Shade"/>
                                 </segments>
                             </segmentedControl>
@@ -650,7 +650,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BWh-qI-LqO"/>
+        <segue reference="OWk-ok-C0V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.backward.circle" catalog="system" width="128" height="123"/>

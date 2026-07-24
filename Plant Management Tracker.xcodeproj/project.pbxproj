@@ -10,27 +10,6 @@
 		33189B3B2FE8CD6300C5EEB1 /* Plant Management Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Management Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3355DC373009C92E0031A2C8 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 33189B3A2FE8CD6300C5EEB1 /* Plant Management Tracker */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		3355DC273009C92D0031A2C8 /* Plant Management Tracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3355DC373009C92E0031A2C8 /* Exceptions for "Plant Management Tracker" folder in "Plant Management Tracker" target */,
-			);
-			path = "Plant Management Tracker";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		33189B382FE8CD6300C5EEB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -45,7 +24,7 @@
 		33189B322FE8CD6300C5EEB1 = {
 			isa = PBXGroup;
 			children = (
-				3355DC273009C92D0031A2C8 /* Plant Management Tracker */,
+				337BFFF43013010A00EAC9F0 /* New Group */,
 				33189B3C2FE8CD6300C5EEB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +35,13 @@
 				33189B3B2FE8CD6300C5EEB1 /* Plant Management Tracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		337BFFF43013010A00EAC9F0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +58,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				3355DC273009C92D0031A2C8 /* Plant Management Tracker */,
 			);
 			name = "Plant Management Tracker";
 			packageProductDependencies = (

@@ -76,6 +76,8 @@ class DataManager {
         //Add the plant to the collection.
         plantCollection.append(plant)
         
+        print("Plants stored: \(plantCollection.count)")
+        
         //Save the updated collection.
         savePlants(plantCollection)
     }
